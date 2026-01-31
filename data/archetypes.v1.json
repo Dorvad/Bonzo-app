@@ -1,0 +1,330 @@
+{
+  "version": "1.0",
+  "description": "AdoptMatch archetype database – adoption-first dog mix profiles",
+  "archetypes": [
+    {
+      "id": "companion_mix",
+      "name": "Companion-Type Mix",
+      "tier": 1,
+      "size": ["small", "medium"],
+      "traits": {
+        "T1": 1,
+        "T2": 1,
+        "T3": 3,
+        "T4": 3,
+        "T5": 2,
+        "T6": 1,
+        "T7": 2,
+        "T8": 1,
+        "T9": 3,
+        "T10": 3
+      },
+      "tags": ["apartment_ok", "first_time_ok", "people_oriented"],
+      "risks": ["separation_sensitivity"],
+      "why": [
+        "Adaptable to apartment life",
+        "Usually people-friendly and forgiving",
+        "Good fit for first-time adopters"
+      ],
+      "ask_shelter": [
+        "How does the dog handle being alone for a few hours?",
+        "Has the dog lived in a home environment before?"
+      ]
+    },
+
+    {
+      "id": "retriever_mix",
+      "name": "Retriever-Type Mix",
+      "tier": 1,
+      "size": ["medium", "large"],
+      "traits": {
+        "T1": 2,
+        "T2": 1,
+        "T3": 4,
+        "T4": 4,
+        "T5": 2,
+        "T6": 1,
+        "T7": 4,
+        "T8": 1,
+        "T9": 2,
+        "T10": 4
+      },
+      "tags": ["family_friendly", "high_sociability"],
+      "risks": ["high_shedding", "needs_daily_activity"],
+      "why": [
+        "Excellent with people and kids",
+        "Generally tolerant and social",
+        "Often adjusts well to family routines"
+      ],
+      "ask_shelter": [
+        "How does the dog behave around children?",
+        "What kind of daily exercise does the dog need?"
+      ]
+    },
+
+    {
+      "id": "balanced_mutt",
+      "name": "Balanced Mixed Breed",
+      "tier": 1,
+      "size": ["medium"],
+      "traits": {
+        "T1": 2,
+        "T2": 1,
+        "T3": 2,
+        "T4": 3,
+        "T5": 2,
+        "T6": 2,
+        "T7": 2,
+        "T8": 1,
+        "T9": 3,
+        "T10": 3
+      },
+      "tags": ["low_extremes", "adaptable"],
+      "risks": ["individual_variability"],
+      "why": [
+        "No extreme needs in one direction",
+        "Often overlooked but highly adaptable",
+        "Good urban companions"
+      ],
+      "ask_shelter": [
+        "What is known about the dog’s energy level?",
+        "How does the dog react to new environments?"
+      ]
+    },
+
+    {
+      "id": "bully_mix",
+      "name": "Bully-Type Mix",
+      "tier": 2,
+      "size": ["medium", "large"],
+      "traits": {
+        "T1": 2,
+        "T2": 2,
+        "T3": 3,
+        "T4": 1,
+        "T5": 2,
+        "T6": 1,
+        "T7": 1,
+        "T8": 1,
+        "T9": 2,
+        "T10": 3
+      },
+      "tags": ["people_affectionate", "low_shedding"],
+      "risks": ["dog_selective", "stigma"],
+      "why": [
+        "Very people-oriented and affectionate",
+        "Often calm indoors",
+        "Low grooming needs"
+      ],
+      "ask_shelter": [
+        "How does the dog react to other dogs?",
+        "Has the dog lived in an apartment?"
+      ]
+    },
+
+    {
+      "id": "poodle_mix",
+      "name": "Low-Shedding / Poodle-Type Mix",
+      "tier": 2,
+      "size": ["small", "medium"],
+      "traits": {
+        "T1": 2,
+        "T2": 2,
+        "T3": 3,
+        "T4": 2,
+        "T5": 2,
+        "T6": 2,
+        "T7": 0,
+        "T8": 3,
+        "T9": 3,
+        "T10": 3
+      },
+      "tags": ["low_shedding", "intelligent"],
+      "risks": ["high_grooming", "understimulation"],
+      "why": [
+        "Good choice for shedding-sensitive homes",
+        "Smart and trainable",
+        "Often friendly and engaged"
+      ],
+      "ask_shelter": [
+        "What grooming routine is required?",
+        "How does the dog handle mental stimulation?"
+      ]
+    },
+
+    {
+      "id": "small_terrier_mix",
+      "name": "Small Terrier-Type Mix",
+      "tier": 2,
+      "size": ["small"],
+      "traits": {
+        "T1": 2,
+        "T2": 2,
+        "T3": 2,
+        "T4": 1,
+        "T5": 2,
+        "T6": 3,
+        "T7": 1,
+        "T8": 1,
+        "T9": 3,
+        "T10": 2
+      },
+      "tags": ["compact", "energetic"],
+      "risks": ["barking", "prey_drive"],
+      "why": [
+        "Small size fits apartments",
+        "Playful and engaging",
+        "Often confident little dogs"
+      ],
+      "ask_shelter": [
+        "Is the dog vocal?",
+        "How does the dog behave around cats?"
+      ]
+    },
+
+    {
+      "id": "shepherd_mix",
+      "name": "Shepherd-Type Mix",
+      "tier": 3,
+      "size": ["large"],
+      "traits": {
+        "T1": 3,
+        "T2": 3,
+        "T3": 2,
+        "T4": 2,
+        "T5": 1,
+        "T6": 2,
+        "T7": 4,
+        "T8": 2,
+        "T9": 1,
+        "T10": 2
+      },
+      "tags": ["high_intelligence", "protective"],
+      "risks": ["high_training_needs", "boredom_risk"],
+      "why": [
+        "Deeply bonded and loyal",
+        "Thrives with structure and engagement"
+      ],
+      "ask_shelter": [
+        "What training has the dog received?",
+        "How does the dog handle being alone?"
+      ]
+    },
+
+    {
+      "id": "hound_mix",
+      "name": "Hound-Type Mix",
+      "tier": 3,
+      "size": ["medium", "large"],
+      "traits": {
+        "T1": 2,
+        "T2": 2,
+        "T3": 3,
+        "T4": 2,
+        "T5": 2,
+        "T6": 4,
+        "T7": 2,
+        "T8": 1,
+        "T9": 2,
+        "T10": 3
+      },
+      "tags": ["friendly", "scent_driven"],
+      "risks": ["vocal", "recall_challenges"],
+      "why": [
+        "Social and good-natured",
+        "Often great with families"
+      ],
+      "ask_shelter": [
+        "How vocal is the dog?",
+        "How does the dog behave on leash?"
+      ]
+    },
+
+    {
+      "id": "sighthound_mix",
+      "name": "Sighthound-Type Mix",
+      "tier": 3,
+      "size": ["medium", "large"],
+      "traits": {
+        "T1": 2,
+        "T2": 2,
+        "T3": 2,
+        "T4": 0,
+        "T5": 3,
+        "T6": 1,
+        "T7": 1,
+        "T8": 1,
+        "T9": 3,
+        "T10": 2
+      },
+      "tags": ["calm_indoors", "independent"],
+      "risks": ["high_prey_drive"],
+      "why": [
+        "Quiet and calm inside the home",
+        "Often tolerates alone time well"
+      ],
+      "ask_shelter": [
+        "Is the dog safe around cats?",
+        "How does the dog respond off leash?"
+      ]
+    },
+
+    {
+      "id": "spitz_mix",
+      "name": "Spitz / Northern-Type Mix",
+      "tier": 4,
+      "size": ["medium", "large"],
+      "traits": {
+        "T1": 4,
+        "T2": 3,
+        "T3": 3,
+        "T4": 2,
+        "T5": 1,
+        "T6": 4,
+        "T7": 4,
+        "T8": 2,
+        "T9": 1,
+        "T10": 2
+      },
+      "tags": ["high_energy", "expressive"],
+      "risks": ["noise", "escape_risk", "high_shedding"],
+      "why": [
+        "Very social and expressive dogs",
+        "Great for active, experienced adopters"
+      ],
+      "ask_shelter": [
+        "How vocal is the dog?",
+        "Does the dog try to escape or roam?"
+      ]
+    },
+
+    {
+      "id": "senior_dog",
+      "name": "Senior Dog (Age-Based)",
+      "tier": 1,
+      "size": ["small", "medium", "large"],
+      "traits": {
+        "T1": 0,
+        "T2": 1,
+        "T3": 3,
+        "T4": 3,
+        "T5": 3,
+        "T6": 1,
+        "T7": 2,
+        "T8": 1,
+        "T9": 3,
+        "T10": 2
+      },
+      "tags": ["low_energy", "predictable"],
+      "risks": ["health_costs"],
+      "why": [
+        "Lower energy and predictable temperament",
+        "Often overlooked despite great fit"
+      ],
+      "ask_shelter": [
+        "What medical care is currently needed?",
+        "What is the dog’s daily routine like?"
+      ]
+    }
+  ]
+}
