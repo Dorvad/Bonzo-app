@@ -1,0 +1,56 @@
+/* ==========================================================================
+   animations.css — AdoptMatch
+   Small, tasteful motion + transitions
+   ========================================================================== */
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Apply gentle entrance animation to main screens */
+.screen-welcome .welcome-content,
+.screen-quiz .quiz-card,
+.screen-results .results-hero-card,
+.screen-detail .detail-content {
+  animation: fade-up var(--dur-slow) var(--ease-out);
+}
+
+/* Smooth scrolling carousels */
+.results-carousel,
+.ask-carousel {
+  scroll-behavior: smooth;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .screen-welcome .welcome-content,
+  .screen-quiz .quiz-card,
+  .screen-results .results-hero-card,
+  .screen-detail .detail-content {
+    animation: none;
+  }
+
+  .results-carousel,
+  .ask-carousel {
+    scroll-behavior: auto;
+  }
+}
+```0
