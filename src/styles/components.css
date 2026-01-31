@@ -1,0 +1,221 @@
+/* ==========================================================================
+   components.css — AdoptMatch
+   Buttons, chips, cards, choice grid, carousel cards, toast
+   ========================================================================== */
+
+/* Buttons */
+.primary-cta {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-brand-accent) 92%, white),
+    color-mix(in srgb, var(--color-brand-accent-2) 72%, white)
+  );
+  color: var(--color-brand-ink);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-fast) var(--ease-out), filter var(--dur-fast) var(--ease-out);
+}
+
+.primary-cta:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.primary-cta:disabled {
+  filter: grayscale(0.6);
+  opacity: 0.7;
+}
+
+.secondary-cta {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-bg-1) 75%, transparent);
+  border: 1px solid var(--color-border-soft);
+  color: var(--color-text-0);
+  font-weight: var(--font-weight-medium);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.secondary-cta:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-soft);
+  background: color-mix(in srgb, var(--color-bg-1) 70%, transparent);
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-xs);
+}
+
+.icon-btn:active {
+  transform: translateY(1px);
+}
+
+.mini-btn {
+  padding: 10px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-soft);
+  background: color-mix(in srgb, var(--color-bg-1) 75%, transparent);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Chips / badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-soft);
+  background: color-mix(in srgb, var(--color-bg-1) 78%, transparent);
+  font-size: var(--fs-sm);
+  color: var(--color-text-1);
+}
+
+.why-chip {
+  display: inline-flex;
+  padding: 8px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(109, 214, 195, 0.18);
+  border: 1px solid rgba(109, 214, 195, 0.35);
+  font-size: var(--fs-sm);
+  color: var(--color-text-0);
+}
+
+.risk-chip {
+  display: inline-flex;
+  padding: 8px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(240, 113, 103, 0.12);
+  border: 1px solid rgba(240, 113, 103, 0.25);
+  font-size: var(--fs-sm);
+  color: var(--color-text-0);
+}
+
+/* Choice grid (quiz answers) */
+.choice-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 520px) {
+  .choice-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+}
+
+.choice-card {
+  width: 100%;
+  text-align: left;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-soft);
+  background: color-mix(in srgb, var(--color-bg-1) 65%, transparent);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  position: relative;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  min-height: 92px;
+  transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.choice-card:active {
+  transform: translateY(1px);
+}
+
+.choice-card.is-selected {
+  border-color: rgba(109, 214, 195, 0.7);
+  box-shadow: var(--shadow-sm);
+}
+
+.choice-card-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 92px;
+  overflow: hidden;
+}
+
+.choice-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.choice-card-media-fallback {
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+}
+
+.choice-card-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.25)
+  );
+}
+
+.choice-card-text {
+  padding: 14px 14px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.choice-card-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-0);
+}
+
+.choice-card-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--color-text-2);
+}
+
+.choice-card-check {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-strong);
+  background: color-mix(in srgb, var(--color-bg-0) 85%, transparent);
+}
+
+.choice-card.is-selected .choice-card-check {
+  background: rgba(109, 214, 195, 0.9);
+  border-color: rgba(109, 214, 195, 0.9);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(18px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  padding: 10px 12px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-bg-2) 82%, transparent);
+  border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-sm);
+  font-size: var(--fs-sm);
+  color: var(--color-text-0);
+  z-index: var(--z-overlay);
+  animation: toast-in var(--dur-base) var(--ease-out);
+}
