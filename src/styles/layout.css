@@ -1,0 +1,76 @@
+/* ==========================================================================
+   layout.css — AdoptMatch
+   Mobile-first layout primitives (no component styling here)
+   ========================================================================== */
+
+.app {
+  min-height: 100svh;
+  display: block;
+}
+
+/* Screen wrapper */
+.screen {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Constrain content width for tablets */
+.screen > * {
+  width: 100%;
+}
+
+.container {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+/* Safe area utility (already in base.css, but useful here too) */
+.safe-area-padding {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 0px);
+  padding-top: calc(env(safe-area-inset-top) + 0px);
+}
+
+/* Common spacing blocks */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* Buttons bar pinned to bottom */
+.bottom-bar {
+  margin-top: auto;
+  padding: var(--space-md);
+  padding-bottom: calc(var(--space-md) + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--color-border-soft);
+  background: color-mix(in srgb, var(--color-bg-0) 88%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+/* Tap targets */
+.icon-btn,
+.primary-cta,
+.secondary-cta,
+.mini-btn {
+  min-height: 44px;
+}
+
+/* Media queries */
+@media (min-width: 700px) {
+  .container {
+    padding: var(--space-xl);
+  }
+}
