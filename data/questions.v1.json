@@ -1,0 +1,319 @@
+{
+  "version": "1.0",
+  "description": "AdoptMatch – adoption-first, visual quiz questions",
+  "questions": [
+    {
+      "id": "home_type",
+      "section": "home",
+      "title": "Where do you live?",
+      "visual": "home",
+      "type": "single",
+      "options": [
+        {
+          "id": "apt_no_outdoor",
+          "label": "Apartment",
+          "subtitle": "No outdoor space",
+          "image": "assets/photos/lifestyle-apartment.webp",
+          "traits": { "T9": 0 }
+        },
+        {
+          "id": "apt_balcony",
+          "label": "Apartment",
+          "subtitle": "Balcony / terrace",
+          "image": "assets/photos/lifestyle-balcony.webp",
+          "traits": { "T9": 1 }
+        },
+        {
+          "id": "house_small_yard",
+          "label": "House",
+          "subtitle": "Small yard",
+          "image": "assets/photos/lifestyle-yard-small.webp",
+          "traits": { "T9": 2 }
+        },
+        {
+          "id": "house_large_yard",
+          "label": "House",
+          "subtitle": "Large yard",
+          "image": "assets/photos/lifestyle-yard-large.webp",
+          "traits": { "T9": 3 }
+        }
+      ]
+    },
+
+    {
+      "id": "stairs_elevator",
+      "section": "home",
+      "title": "How do you usually get home?",
+      "visual": "stairs",
+      "type": "single",
+      "options": [
+        {
+          "id": "elevator",
+          "label": "Elevator",
+          "image": "assets/icons/elevator.svg",
+          "traits": {}
+        },
+        {
+          "id": "stairs_low",
+          "label": "1–2 floors",
+          "image": "assets/icons/stairs.svg",
+          "traits": {}
+        },
+        {
+          "id": "stairs_high",
+          "label": "3+ floors",
+          "image": "assets/icons/stairs.svg",
+          "traits": { "mobility_penalty": true }
+        }
+      ]
+    },
+
+    {
+      "id": "daily_activity",
+      "section": "lifestyle",
+      "title": "How much time can you realistically give a dog every day?",
+      "visual": "activity",
+      "type": "single",
+      "options": [
+        {
+          "id": "activity_low",
+          "label": "30–60 min",
+          "image": "assets/icons/clock.svg",
+          "traits": { "T1": 0 }
+        },
+        {
+          "id": "activity_medium",
+          "label": "60–90 min",
+          "image": "assets/icons/clock.svg",
+          "traits": { "T1": 1 }
+        },
+        {
+          "id": "activity_high",
+          "label": "90–120 min",
+          "image": "assets/icons/clock.svg",
+          "traits": { "T1": 2 }
+        },
+        {
+          "id": "activity_very_high",
+          "label": "120+ min",
+          "image": "assets/icons/clock.svg",
+          "traits": { "T1": 3 }
+        }
+      ]
+    },
+
+    {
+      "id": "alone_time",
+      "section": "work",
+      "title": "On a typical weekday, how long would the dog be alone?",
+      "visual": "alone",
+      "type": "single",
+      "options": [
+        {
+          "id": "alone_short",
+          "label": "< 3 hours",
+          "image": "assets/icons/home.svg",
+          "traits": { "T5": 3 }
+        },
+        {
+          "id": "alone_medium",
+          "label": "3–5 hours",
+          "image": "assets/icons/home.svg",
+          "traits": { "T5": 2 }
+        },
+        {
+          "id": "alone_long",
+          "label": "5–8 hours",
+          "image": "assets/icons/home.svg",
+          "traits": { "T5": 1 }
+        },
+        {
+          "id": "alone_very_long",
+          "label": "8+ hours",
+          "image": "assets/icons/home.svg",
+          "traits": { "T5": 0, "risk": "high_alone_time" }
+        }
+      ]
+    },
+
+    {
+      "id": "support_system",
+      "section": "work",
+      "title": "If needed, can you arrange support?",
+      "visual": "support",
+      "type": "multi",
+      "options": [
+        {
+          "id": "walker",
+          "label": "Dog walker",
+          "image": "assets/icons/walker.svg",
+          "traits": { "T5": 1 }
+        },
+        {
+          "id": "daycare",
+          "label": "Daycare",
+          "image": "assets/icons/daycare.svg",
+          "traits": { "T5": 1 }
+        },
+        {
+          "id": "friends_family",
+          "label": "Friends / family",
+          "image": "assets/icons/friends.svg",
+          "traits": { "T5": 1 }
+        },
+        {
+          "id": "none",
+          "label": "No support",
+          "image": "assets/icons/warning.svg",
+          "traits": {}
+        }
+      ]
+    },
+
+    {
+      "id": "children",
+      "section": "household",
+      "title": "What about children?",
+      "visual": "kids",
+      "type": "single",
+      "options": [
+        {
+          "id": "kids_home",
+          "label": "Live with kids",
+          "image": "assets/photos/lifestyle-kids.webp",
+          "traits": { "T10": 3 }
+        },
+        {
+          "id": "kids_visit",
+          "label": "Kids visit often",
+          "image": "assets/photos/lifestyle-kids.webp",
+          "traits": { "T10": 2 }
+        },
+        {
+          "id": "kids_rare",
+          "label": "Rarely / never",
+          "image": "assets/icons/no-kids.svg",
+          "traits": { "T10": 1 }
+        }
+      ]
+    },
+
+    {
+      "id": "hosting",
+      "section": "social",
+      "title": "How often do you host friends at home?",
+      "visual": "guests",
+      "type": "single",
+      "options": [
+        {
+          "id": "guests_rare",
+          "label": "Rarely",
+          "image": "assets/photos/lifestyle-guests.webp",
+          "traits": { "T3": 1 }
+        },
+        {
+          "id": "guests_weekly",
+          "label": "Weekly",
+          "image": "assets/photos/lifestyle-guests.webp",
+          "traits": { "T3": 2 }
+        },
+        {
+          "id": "guests_often",
+          "label": "Several times a week",
+          "image": "assets/photos/lifestyle-guests.webp",
+          "traits": { "T3": 3 }
+        }
+      ]
+    },
+
+    {
+      "id": "other_pets",
+      "section": "household",
+      "title": "Any other pets at home?",
+      "visual": "pets",
+      "type": "multi",
+      "options": [
+        {
+          "id": "cat",
+          "label": "Cat",
+          "image": "assets/icons/cat.svg",
+          "traits": { "T4": 0, "risk": "cat_home" }
+        },
+        {
+          "id": "dog",
+          "label": "Dog(s)",
+          "image": "assets/icons/dog.svg",
+          "traits": { "T4": 2 }
+        },
+        {
+          "id": "none",
+          "label": "No other pets",
+          "image": "assets/icons/none.svg",
+          "traits": { "T4": 3 }
+        }
+      ]
+    },
+
+    {
+      "id": "experience",
+      "section": "experience",
+      "title": "Your experience with dogs?",
+      "visual": "experience",
+      "type": "single",
+      "options": [
+        {
+          "id": "first_time",
+          "label": "First dog",
+          "image": "assets/icons/beginner.svg",
+          "traits": { "T2": 0 }
+        },
+        {
+          "id": "family_dog",
+          "label": "Family dog before",
+          "image": "assets/icons/intermediate.svg",
+          "traits": { "T2": 1 }
+        },
+        {
+          "id": "adult_owner",
+          "label": "Owned as adult",
+          "image": "assets/icons/intermediate.svg",
+          "traits": { "T2": 2 }
+        },
+        {
+          "id": "experienced",
+          "label": "Very experienced",
+          "image": "assets/icons/expert.svg",
+          "traits": { "T2": 3 }
+        }
+      ]
+    },
+
+    {
+      "id": "tolerances",
+      "section": "tolerance",
+      "title": "Which things would bother you most?",
+      "visual": "tolerance",
+      "type": "multi",
+      "options": [
+        {
+          "id": "barking",
+          "label": "Barking",
+          "image": "assets/icons/sound.svg",
+          "traits": { "T6": 0 }
+        },
+        {
+          "id": "shedding",
+          "label": "Shedding",
+          "image": "assets/icons/shedding.svg",
+          "traits": { "T7": 0 }
+        },
+        {
+          "id": "grooming",
+          "label": "Grooming",
+          "image": "assets/icons/brush.svg",
+          "traits": { "T8": 0 }
+        }
+      ]
+    }
+  ]
+}
