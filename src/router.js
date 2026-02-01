@@ -9,15 +9,22 @@ import { renderWelcomeScreen } from "./screens/screen_welcome.js";
 import { renderQuizScreen } from "./screens/screen_quiz.js";
 import { renderResultsScreen } from "./screens/screen_results.js";
 
-// Optional: you may implement this later.
-// For now we handle detail route gracefully.
+// Optional: load detail screen lazily to avoid top-level await (older browsers).
 let renderArchetypeDetailScreen = null;
-try {
-  // If you later create this file, it will automatically work.
-  // eslint-disable-next-line import/no-unresolved
-  ({ renderArchetypeDetailScreen } = await import("./screens/screen_archetype_detail.js"));
-} catch (_) {
-  // ignore if file doesn't exist yet
+let detailLoadPromise = null;
+
+function loadDetailScreen() {
+  if (renderArchetypeDetailScreen) return Promise.resolve(renderArchetypeDetailScreen);
+  if (detailLoadPromise) return detailLoadPromise;
+
+  detailLoadPromise = import("./screens/screen_archetype_detail.js")
+    .then((mod) => {
+      renderArchetypeDetailScreen = mod.renderArchetypeDetailScreen;
+      return renderArchetypeDetailScreen;
+    })
+    .catch(() => null);
+
+  return detailLoadPromise;
 }
 
 const ROUTES = {
@@ -25,32 +32,34 @@ const ROUTES = {
   quiz: () => renderQuizScreen(),
   results: () => renderResultsScreen(),
   detail: (id) => {
-    if (typeof renderArchetypeDetailScreen === "function") {
-      renderArchetypeDetailScreen(id);
-      return;
-    }
-    // Fallback if detail screen isn't implemented yet
-    const app = document.getElementById("app");
-    if (!app) return;
-    app.innerHTML = `
-      <section class="screen safe-area-padding">
-        <div style="padding:24px;">
-          <h2>Details</h2>
-          <p style="margin-top:12px;">
-            Detail screen isn’t implemented yet.
-          </p>
-          <button id="backToResultsBtn" style="
-            margin-top:16px;
-            padding:12px 14px;
-            border-radius:12px;
-            border:1px solid rgba(0,0,0,.15);
-            background: transparent;
-          ">Back</button>
-        </div>
-      </section>
-    `;
-    document.getElementById("backToResultsBtn")?.addEventListener("click", () => {
-      navigate("results");
+    loadDetailScreen().then((screen) => {
+      if (typeof screen === "function") {
+        screen(id);
+        return;
+      }
+      // Fallback if detail screen isn't implemented yet
+      const app = document.getElementById("app");
+      if (!app) return;
+      app.innerHTML = `
+        <section class="screen safe-area-padding">
+          <div style="padding:24px;">
+            <h2>Details</h2>
+            <p style="margin-top:12px;">
+              Detail screen isn’t implemented yet.
+            </p>
+            <button id="backToResultsBtn" style="
+              margin-top:16px;
+              padding:12px 14px;
+              border-radius:12px;
+              border:1px solid rgba(0,0,0,.15);
+              background: transparent;
+            ">Back</button>
+          </div>
+        </section>
+      `;
+      document.getElementById("backToResultsBtn")?.addEventListener("click", () => {
+        navigate("results");
+      });
     });
   },
 };
