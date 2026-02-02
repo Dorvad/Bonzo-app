@@ -1,4 +1,4 @@
-const CACHE_VERSION = "adoptmatch-v2";
+const CACHE_VERSION = "adoptmatch-v3";
 const CORE_ASSETS = [
   "./",
   "./index.html",
