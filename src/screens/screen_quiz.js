@@ -136,9 +136,8 @@ function renderDots(index, total) {
 }
 
 function renderQuestionCard(q) {
-  const bg = q.visual
-    ? `style="--q-visual:url('./assets/photos/lifestyle-${escapeAttr(q.visual)}.webp')"`
-    : "";
+  const visualSrc = resolveQuizVisual(q.visual);
+  const bg = visualSrc ? `style="--q-visual:url('${escapeAttr(visualSrc)}')"` : "";
 
   return `
     <main class="quiz-card" ${bg}>
@@ -240,6 +239,24 @@ function labelForSection(section) {
     tolerance: "Tolerances",
   };
   return map[section] || "Quiz";
+}
+
+function resolveQuizVisual(visualKey) {
+  const key = String(visualKey || "").trim();
+  const map = {
+    home: "./assets/photos/lifestyle-apartment.webp",
+    stairs: "./assets/photos/lifestyle-apartment.webp",
+    activity: "./assets/photos/lifestyle-yard-large.webp",
+    alone: "./assets/photos/lifestyle-apartment.webp",
+    support: "./assets/photos/lifestyle-guests.webp",
+    kids: "./assets/photos/lifestyle-kids.webp",
+    guests: "./assets/photos/lifestyle-guests.webp",
+    pets: "./assets/photos/lifestyle-yard-small.webp",
+    experience: "./assets/photos/lifestyle-yard-small.webp",
+    tolerance: "./assets/photos/lifestyle-balcony.webp",
+  };
+
+  return map[key] || "./assets/illustrations/hero-dog-collage.webp";
 }
 
 function hintForType(type) {
