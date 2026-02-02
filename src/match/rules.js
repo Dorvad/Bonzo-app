@@ -175,4 +175,3 @@ function clamp(n, min, max) {
 function round1(n) {
   return Math.round(n * 10) / 10;
 }
-```0

@@ -1,4 +1,4 @@
-const CACHE_VERSION = "adoptmatch-v3";
+const CACHE_VERSION = "adoptmatch-v4";
 const CORE_ASSETS = [
   "./",
   "./index.html",
@@ -74,4 +74,3 @@ self.addEventListener("fetch", (event) => {
       .catch(() => caches.match(req))
   );
 });
-

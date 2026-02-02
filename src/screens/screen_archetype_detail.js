@@ -302,4 +302,3 @@ function escapeHtml(str) {
 function escapeAttr(str) {
   return String(str).replaceAll('"', "&quot;").replaceAll("'", "");
 }
-```0

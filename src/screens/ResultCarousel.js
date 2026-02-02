@@ -191,4 +191,3 @@ function hapticTick() {
     if (navigator.vibrate) navigator.vibrate(10);
   } catch (_) {}
 }
-```0
