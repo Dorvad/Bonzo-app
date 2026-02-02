@@ -115,4 +115,3 @@ function validateArchetypes(archetypes) {
     }
   }
 }
-```0 
