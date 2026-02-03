@@ -49,8 +49,10 @@ export function renderWelcomeScreen() {
           Start the match
         </button>
 
+        <p class="welcome-cta-note">Takes ~60 seconds</p>
+
         <p class="welcome-footnote">
-          Takes ~3 minutes · No sign-up · Your answers stay on your device
+          No sign-up · Your answers stay on your device
         </p>
       </div>
     </section>
