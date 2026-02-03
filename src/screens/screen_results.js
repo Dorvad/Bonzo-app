@@ -296,7 +296,7 @@ function renderBottomActions() {
   return `
     <footer class="results-actions">
       <button class="secondary-cta" id="restartBtnBottom">Restart</button>
-      <button class="primary-cta" id="shareBtn" disabled title="Coming soon">
+      <button class="primary-cta btn-primary" id="shareBtn" disabled title="Coming soon" aria-disabled="true">
         Share results
       </button>
     </footer>

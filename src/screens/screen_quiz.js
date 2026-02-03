@@ -140,7 +140,7 @@ function renderQuestionCard(q) {
   const bg = visualSrc ? `style="--q-visual:url('${escapeAttr(visualSrc)}')"` : "";
 
   return `
-    <main class="quiz-card" ${bg}>
+    <main class="quiz-card step" ${bg}>
       <div class="quiz-card-visual" aria-hidden="true"></div>
 
       <div class="quiz-card-content">
@@ -174,12 +174,12 @@ function renderBottomBar(q, index, total) {
   // - multi: visible, disabled until selection
   const nextBtnMarkup =
     q.type === "multi"
-      ? `<button class="primary-cta" id="quizNextBtn" disabled>${nextLabel}</button>`
-      : `<button class="primary-cta hidden" id="quizNextBtn" disabled>${nextLabel}</button>`;
+      ? `<button class="primary-cta btn-primary" id="quizNextBtn" disabled aria-disabled="true">${nextLabel}</button>`
+      : `<button class="primary-cta btn-primary hidden" id="quizNextBtn" disabled aria-disabled="true">${nextLabel}</button>`;
 
   return `
-    <footer class="quiz-bottombar">
-      <button class="secondary-cta" id="quizBackBtn" ${isFirst ? "disabled" : ""}>
+    <footer class="quiz-bottombar quiz-nav">
+      <button class="secondary-cta" id="quizBackBtn" ${isFirst ? "disabled aria-disabled=\"true\"" : ""}>
         ${backLabel}
       </button>
 
@@ -222,6 +222,8 @@ function syncNextEnabled(questionId) {
   const sel = state.answers?.[questionId];
   const hasSelection = Array.isArray(sel) ? sel.length > 0 : !!sel;
   nextBtn.disabled = !hasSelection;
+  nextBtn.setAttribute("aria-disabled", hasSelection ? "false" : "true");
+  nextBtn.classList.toggle("is-enabled", hasSelection);
 }
 
 /* ==========================================================================

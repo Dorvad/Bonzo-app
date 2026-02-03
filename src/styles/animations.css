@@ -25,6 +25,47 @@
   }
 }
 
+@keyframes step-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--lift-1));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.75;
+  }
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes enable-pop {
+  from {
+    transform: scale(0.98);
+    filter: brightness(0.96);
+  }
+  to {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
 /* Apply gentle entrance animation to main screens */
 .screen-welcome .welcome-content,
 .screen-quiz .quiz-card,
@@ -46,6 +87,13 @@
   .screen-results .results-hero-card,
   .screen-detail .detail-content {
     animation: none;
+  }
+
+  .quiz-card.step,
+  .result-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 
   .results-carousel,
