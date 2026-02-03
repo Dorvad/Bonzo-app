@@ -1,12 +1,15 @@
 {
   "version": "1.0",
-  "description": "AdoptMatch archetype database – adoption-first dog mix profiles",
+  "description": "AdoptMatch archetype database \u2013 adoption-first dog mix profiles",
   "archetypes": [
     {
       "id": "companion_mix",
       "name": "Companion-Type Mix",
       "tier": 1,
-      "size": ["small", "medium"],
+      "size": [
+        "small",
+        "medium"
+      ],
       "traits": {
         "T1": 1,
         "T2": 1,
@@ -19,8 +22,14 @@
         "T9": 3,
         "T10": 3
       },
-      "tags": ["apartment_ok", "first_time_ok", "people_oriented"],
-      "risks": ["separation_sensitivity"],
+      "tags": [
+        "apartment_ok",
+        "first_time_ok",
+        "people_oriented"
+      ],
+      "risks": [
+        "separation_sensitivity"
+      ],
       "why": [
         "Adaptable to apartment life",
         "Usually people-friendly and forgiving",
@@ -29,14 +38,48 @@
       "ask_shelter": [
         "How does the dog handle being alone for a few hours?",
         "Has the dog lived in a home environment before?"
+      ],
+      "breed_examples": [
+        {
+          "name": "Cavalier King Charles Spaniel",
+          "note": "affectionate, people-first"
+        },
+        {
+          "name": "Bichon Frise",
+          "note": "cheerful, apartment-friendly"
+        },
+        {
+          "name": "Shih Tzu",
+          "note": "companion-oriented, lower energy"
+        },
+        {
+          "name": "Havanese",
+          "note": "social, adaptable"
+        },
+        {
+          "name": "Maltese",
+          "note": "small, family-focused"
+        },
+        {
+          "name": "Pug",
+          "note": "people-loving, low exercise needs"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC toy group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "retriever_mix",
       "name": "Retriever-Type Mix",
       "tier": 1,
-      "size": ["medium", "large"],
+      "size": [
+        "medium",
+        "large"
+      ],
       "traits": {
         "T1": 2,
         "T2": 1,
@@ -49,8 +92,14 @@
         "T9": 2,
         "T10": 4
       },
-      "tags": ["family_friendly", "high_sociability"],
-      "risks": ["high_shedding", "needs_daily_activity"],
+      "tags": [
+        "family_friendly",
+        "high_sociability"
+      ],
+      "risks": [
+        "high_shedding",
+        "needs_daily_activity"
+      ],
       "why": [
         "Excellent with people and kids",
         "Generally tolerant and social",
@@ -59,14 +108,43 @@
       "ask_shelter": [
         "How does the dog behave around children?",
         "What kind of daily exercise does the dog need?"
+      ],
+      "breed_examples": [
+        {
+          "name": "Labrador Retriever",
+          "note": "friendly, biddable"
+        },
+        {
+          "name": "Golden Retriever",
+          "note": "social, family-oriented"
+        },
+        {
+          "name": "Flat-Coated Retriever",
+          "note": "upbeat, people-focused"
+        },
+        {
+          "name": "Nova Scotia Duck Tolling Retriever",
+          "note": "active, eager to work"
+        },
+        {
+          "name": "Chesapeake Bay Retriever",
+          "note": "driven, loves water"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC sporting group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "balanced_mutt",
       "name": "Balanced Mixed Breed",
       "tier": 1,
-      "size": ["medium"],
+      "size": [
+        "medium"
+      ],
       "traits": {
         "T1": 2,
         "T2": 1,
@@ -79,24 +157,59 @@
         "T9": 3,
         "T10": 3
       },
-      "tags": ["low_extremes", "adaptable"],
-      "risks": ["individual_variability"],
+      "tags": [
+        "low_extremes",
+        "adaptable"
+      ],
+      "risks": [
+        "individual_variability"
+      ],
       "why": [
         "No extreme needs in one direction",
         "Often overlooked but highly adaptable",
         "Good urban companions"
       ],
       "ask_shelter": [
-        "What is known about the dog’s energy level?",
+        "What is known about the dog\u2019s energy level?",
         "How does the dog react to new environments?"
+      ],
+      "breed_examples": [
+        {
+          "name": "Beagle",
+          "note": "friendly, easygoing"
+        },
+        {
+          "name": "Cocker Spaniel",
+          "note": "gentle, adaptable"
+        },
+        {
+          "name": "Collie",
+          "note": "steady, family-oriented"
+        },
+        {
+          "name": "Boxer",
+          "note": "sociable, playful"
+        },
+        {
+          "name": "Labrador Retriever",
+          "note": "versatile, tolerant"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC breed group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "bully_mix",
       "name": "Bully-Type Mix",
       "tier": 2,
-      "size": ["medium", "large"],
+      "size": [
+        "medium",
+        "large"
+      ],
       "traits": {
         "T1": 2,
         "T2": 2,
@@ -109,8 +222,14 @@
         "T9": 2,
         "T10": 3
       },
-      "tags": ["people_affectionate", "low_shedding"],
-      "risks": ["dog_selective", "stigma"],
+      "tags": [
+        "people_affectionate",
+        "low_shedding"
+      ],
+      "risks": [
+        "dog_selective",
+        "stigma"
+      ],
       "why": [
         "Very people-oriented and affectionate",
         "Often calm indoors",
@@ -119,14 +238,44 @@
       "ask_shelter": [
         "How does the dog react to other dogs?",
         "Has the dog lived in an apartment?"
+      ],
+      "breed_examples": [
+        {
+          "name": "American Staffordshire Terrier",
+          "note": "affectionate, people-focused"
+        },
+        {
+          "name": "Staffordshire Bull Terrier",
+          "note": "gentle with people, sturdy"
+        },
+        {
+          "name": "Boxer",
+          "note": "playful, loyal"
+        },
+        {
+          "name": "American Bulldog",
+          "note": "confident, people-oriented"
+        },
+        {
+          "name": "Bull Terrier",
+          "note": "energetic, clownish"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC terrier/bulldog breed descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "poodle_mix",
       "name": "Low-Shedding / Poodle-Type Mix",
       "tier": 2,
-      "size": ["small", "medium"],
+      "size": [
+        "small",
+        "medium"
+      ],
       "traits": {
         "T1": 2,
         "T2": 2,
@@ -139,8 +288,14 @@
         "T9": 3,
         "T10": 3
       },
-      "tags": ["low_shedding", "intelligent"],
-      "risks": ["high_grooming", "understimulation"],
+      "tags": [
+        "low_shedding",
+        "intelligent"
+      ],
+      "risks": [
+        "high_grooming",
+        "understimulation"
+      ],
       "why": [
         "Good choice for shedding-sensitive homes",
         "Smart and trainable",
@@ -149,14 +304,43 @@
       "ask_shelter": [
         "What grooming routine is required?",
         "How does the dog handle mental stimulation?"
+      ],
+      "breed_examples": [
+        {
+          "name": "Poodle (Miniature/Standard)",
+          "note": "smart, low-shedding coat"
+        },
+        {
+          "name": "Bichon Frise",
+          "note": "curly coat, low shed"
+        },
+        {
+          "name": "Portuguese Water Dog",
+          "note": "athletic, low shed"
+        },
+        {
+          "name": "Lagotto Romagnolo",
+          "note": "curly coat, biddable"
+        },
+        {
+          "name": "Barbet",
+          "note": "water dog, low shed"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC non-sporting and sporting group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "small_terrier_mix",
       "name": "Small Terrier-Type Mix",
       "tier": 2,
-      "size": ["small"],
+      "size": [
+        "small"
+      ],
       "traits": {
         "T1": 2,
         "T2": 2,
@@ -169,8 +353,14 @@
         "T9": 3,
         "T10": 2
       },
-      "tags": ["compact", "energetic"],
-      "risks": ["barking", "prey_drive"],
+      "tags": [
+        "compact",
+        "energetic"
+      ],
+      "risks": [
+        "barking",
+        "prey_drive"
+      ],
       "why": [
         "Small size fits apartments",
         "Playful and engaging",
@@ -179,14 +369,43 @@
       "ask_shelter": [
         "Is the dog vocal?",
         "How does the dog behave around cats?"
+      ],
+      "breed_examples": [
+        {
+          "name": "Jack Russell Terrier",
+          "note": "bold, energetic"
+        },
+        {
+          "name": "Rat Terrier",
+          "note": "bright, busy"
+        },
+        {
+          "name": "Cairn Terrier",
+          "note": "confident, playful"
+        },
+        {
+          "name": "Border Terrier",
+          "note": "friendly, sturdy"
+        },
+        {
+          "name": "Norfolk Terrier",
+          "note": "alert, feisty"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC terrier group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "shepherd_mix",
       "name": "Shepherd-Type Mix",
       "tier": 3,
-      "size": ["large"],
+      "size": [
+        "large"
+      ],
       "traits": {
         "T1": 3,
         "T2": 3,
@@ -199,8 +418,14 @@
         "T9": 1,
         "T10": 2
       },
-      "tags": ["high_intelligence", "protective"],
-      "risks": ["high_training_needs", "boredom_risk"],
+      "tags": [
+        "high_intelligence",
+        "protective"
+      ],
+      "risks": [
+        "high_training_needs",
+        "boredom_risk"
+      ],
       "why": [
         "Deeply bonded and loyal",
         "Thrives with structure and engagement"
@@ -208,14 +433,44 @@
       "ask_shelter": [
         "What training has the dog received?",
         "How does the dog handle being alone?"
+      ],
+      "breed_examples": [
+        {
+          "name": "German Shepherd Dog",
+          "note": "loyal, trainable"
+        },
+        {
+          "name": "Belgian Malinois",
+          "note": "intense, high drive"
+        },
+        {
+          "name": "Dutch Shepherd",
+          "note": "work-oriented, athletic"
+        },
+        {
+          "name": "Belgian Tervuren",
+          "note": "smart, vigilant"
+        },
+        {
+          "name": "Australian Shepherd",
+          "note": "herding instincts, energetic"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC herding group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "hound_mix",
       "name": "Hound-Type Mix",
       "tier": 3,
-      "size": ["medium", "large"],
+      "size": [
+        "medium",
+        "large"
+      ],
       "traits": {
         "T1": 2,
         "T2": 2,
@@ -228,8 +483,14 @@
         "T9": 2,
         "T10": 3
       },
-      "tags": ["friendly", "scent_driven"],
-      "risks": ["vocal", "recall_challenges"],
+      "tags": [
+        "friendly",
+        "scent_driven"
+      ],
+      "risks": [
+        "vocal",
+        "recall_challenges"
+      ],
       "why": [
         "Social and good-natured",
         "Often great with families"
@@ -237,14 +498,44 @@
       "ask_shelter": [
         "How vocal is the dog?",
         "How does the dog behave on leash?"
+      ],
+      "breed_examples": [
+        {
+          "name": "Beagle",
+          "note": "scent-driven, social"
+        },
+        {
+          "name": "Basset Hound",
+          "note": "easygoing, nose-led"
+        },
+        {
+          "name": "Bloodhound",
+          "note": "strong scent focus"
+        },
+        {
+          "name": "Treeing Walker Coonhound",
+          "note": "athletic, vocal"
+        },
+        {
+          "name": "American Foxhound",
+          "note": "endurance, pack friendly"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC hound group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "sighthound_mix",
       "name": "Sighthound-Type Mix",
       "tier": 3,
-      "size": ["medium", "large"],
+      "size": [
+        "medium",
+        "large"
+      ],
       "traits": {
         "T1": 2,
         "T2": 2,
@@ -257,8 +548,13 @@
         "T9": 3,
         "T10": 2
       },
-      "tags": ["calm_indoors", "independent"],
-      "risks": ["high_prey_drive"],
+      "tags": [
+        "calm_indoors",
+        "independent"
+      ],
+      "risks": [
+        "high_prey_drive"
+      ],
       "why": [
         "Quiet and calm inside the home",
         "Often tolerates alone time well"
@@ -266,14 +562,44 @@
       "ask_shelter": [
         "Is the dog safe around cats?",
         "How does the dog respond off leash?"
+      ],
+      "breed_examples": [
+        {
+          "name": "Greyhound",
+          "note": "calm indoors, sprinter"
+        },
+        {
+          "name": "Whippet",
+          "note": "quiet, gentle"
+        },
+        {
+          "name": "Saluki",
+          "note": "independent, fast"
+        },
+        {
+          "name": "Borzoi",
+          "note": "graceful, reserved"
+        },
+        {
+          "name": "Italian Greyhound",
+          "note": "sensitive, affectionate"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC hound group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "spitz_mix",
       "name": "Spitz / Northern-Type Mix",
       "tier": 4,
-      "size": ["medium", "large"],
+      "size": [
+        "medium",
+        "large"
+      ],
       "traits": {
         "T1": 4,
         "T2": 3,
@@ -286,8 +612,15 @@
         "T9": 1,
         "T10": 2
       },
-      "tags": ["high_energy", "expressive"],
-      "risks": ["noise", "escape_risk", "high_shedding"],
+      "tags": [
+        "high_energy",
+        "expressive"
+      ],
+      "risks": [
+        "noise",
+        "escape_risk",
+        "high_shedding"
+      ],
       "why": [
         "Very social and expressive dogs",
         "Great for active, experienced adopters"
@@ -295,14 +628,45 @@
       "ask_shelter": [
         "How vocal is the dog?",
         "Does the dog try to escape or roam?"
+      ],
+      "breed_examples": [
+        {
+          "name": "Siberian Husky",
+          "note": "high energy, social"
+        },
+        {
+          "name": "Alaskan Malamute",
+          "note": "strong, pack-oriented"
+        },
+        {
+          "name": "Samoyed",
+          "note": "friendly, fluffy"
+        },
+        {
+          "name": "Akita",
+          "note": "independent, protective"
+        },
+        {
+          "name": "Norwegian Elkhound",
+          "note": "vocal, hardy"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC working group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals breed overviews"
       ]
     },
-
     {
       "id": "senior_dog",
       "name": "Senior Dog (Age-Based)",
       "tier": 1,
-      "size": ["small", "medium", "large"],
+      "size": [
+        "small",
+        "medium",
+        "large"
+      ],
       "traits": {
         "T1": 0,
         "T2": 1,
@@ -315,15 +679,48 @@
         "T9": 3,
         "T10": 2
       },
-      "tags": ["low_energy", "predictable"],
-      "risks": ["health_costs"],
+      "tags": [
+        "low_energy",
+        "predictable"
+      ],
+      "risks": [
+        "health_costs"
+      ],
       "why": [
         "Lower energy and predictable temperament",
         "Often overlooked despite great fit"
       ],
       "ask_shelter": [
         "What medical care is currently needed?",
-        "What is the dog’s daily routine like?"
+        "What is the dog\u2019s daily routine like?"
+      ],
+      "breed_examples": [
+        {
+          "name": "Senior Labrador Retriever",
+          "note": "often mellow, people-friendly"
+        },
+        {
+          "name": "Senior Beagle",
+          "note": "gentle, scent-focused"
+        },
+        {
+          "name": "Senior Chihuahua",
+          "note": "small, companionable"
+        },
+        {
+          "name": "Senior Cocker Spaniel",
+          "note": "affectionate, steady"
+        },
+        {
+          "name": "Senior German Shepherd",
+          "note": "loyal, calmer with age"
+        }
+      ],
+      "breed_examples_disclaimer": "Examples only \u2014 mixes vary. Ask the shelter about the individual dog.",
+      "sources": [
+        "AKC breed group descriptions",
+        "Britannica dog breed profiles",
+        "VCA Hospitals senior dog guidance"
       ]
     }
   ]

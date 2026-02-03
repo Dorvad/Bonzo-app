@@ -99,6 +99,46 @@
   color: var(--color-text-0);
 }
 
+.breed-examples {
+  display: grid;
+  gap: 6px;
+}
+
+.breed-examples-title {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+.breed-examples-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.breed-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-brand-accent-2) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-brand-accent-2) 32%, transparent);
+  font-size: var(--fs-sm);
+  color: var(--color-text-1);
+  line-height: 1;
+}
+
+.breed-chip--more {
+  background: color-mix(in srgb, var(--color-bg-1) 75%, transparent);
+  border-style: dashed;
+  color: var(--color-text-2);
+}
+
+.breed-disclaimer {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
 /* Choice grid (quiz answers) */
 .choice-grid {
   display: grid;
