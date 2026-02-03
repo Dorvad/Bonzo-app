@@ -45,7 +45,7 @@ export function renderWelcomeScreen() {
           </li>
         </ul>
 
-        <button class="primary-cta" id="startQuizBtn">
+        <button class="primary-cta btn-primary" id="startQuizBtn">
           Start the match
         </button>
 

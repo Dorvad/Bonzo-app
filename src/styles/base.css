@@ -107,7 +107,7 @@ a {
 }
 
 a:focus-visible {
-  outline: 2px solid var(--color-brand-accent);
+  outline: 3px solid rgba(120, 180, 255, 0.65);
   outline-offset: 2px;
 }
 
@@ -126,7 +126,7 @@ button {
 }
 
 button:focus-visible {
-  outline: 2px solid var(--color-brand-accent);
+  outline: 3px solid rgba(120, 180, 255, 0.65);
   outline-offset: 2px;
 }
 
@@ -149,7 +149,13 @@ textarea {
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--color-brand-accent);
+  outline: 3px solid rgba(120, 180, 255, 0.65);
+  outline-offset: 2px;
+}
+
+/* Global focus treatment */
+:focus-visible {
+  outline: 3px solid rgba(120, 180, 255, 0.65);
   outline-offset: 2px;
 }
 

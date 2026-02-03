@@ -31,6 +31,12 @@
   --color-info: #7bb0ff;
   --color-error: #f07167;
 
+  /* Core surface tokens */
+  --bg: var(--color-bg-0);
+  --surface: var(--color-bg-1);
+  --text: var(--color-text-0);
+  --muted: var(--color-text-muted);
+
   /* ------------------------------------------------------------------------
      Typography
      ------------------------------------------------------------------------ */
@@ -81,15 +87,25 @@
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.12);
 
+  --radius: var(--radius-md);
+  --hairline: 1px solid var(--color-border-soft);
+  --shadow: var(--shadow-sm);
+
   /* ------------------------------------------------------------------------
      Motion
      ------------------------------------------------------------------------ */
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in: cubic-bezier(0.6, 0, 0.8, 0.4);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 
   --dur-fast: 120ms;
   --dur-base: 220ms;
   --dur-slow: 420ms;
+
+  --dur-1: var(--dur-fast);
+  --dur-2: var(--dur-base);
+  --dur-3: var(--dur-slow);
+  --lift-1: 10px;
 
   /* ------------------------------------------------------------------------
      Z-index scale
@@ -131,5 +147,10 @@
     --dur-fast: 0ms;
     --dur-base: 0ms;
     --dur-slow: 0ms;
+  }
+
+  * {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
   }
 }

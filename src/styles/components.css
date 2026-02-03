@@ -7,16 +7,13 @@
 .primary-cta {
   width: 100%;
   padding: 14px 16px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--color-brand-accent) 92%, white),
-    color-mix(in srgb, var(--color-brand-accent-2) 72%, white)
-  );
+  border-radius: calc(var(--radius) + 4px);
   color: var(--color-brand-ink);
   font-weight: var(--font-weight-semibold);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--dur-fast) var(--ease-out), filter var(--dur-fast) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--dur-1) var(--ease-out), box-shadow var(--dur-2) var(--ease-out),
+    filter var(--dur-1) var(--ease-out);
 }
 
 .primary-cta:active {
@@ -24,8 +21,39 @@
 }
 
 .primary-cta:disabled {
-  filter: grayscale(0.6);
+  filter: grayscale(0.5);
   opacity: 0.7;
+}
+
+.primary-cta.is-enabled {
+  animation: enable-pop var(--dur-2) var(--ease-out);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgba(120, 255, 220, 0.9), rgba(120, 180, 255, 0.85));
+  box-shadow: 0 10px 24px rgba(20, 22, 26, 0.14);
+}
+
+@media (hover: hover) {
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 34px rgba(20, 22, 26, 0.18);
+  }
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: translateX(-60%);
+  transition: transform 600ms var(--ease-out);
+}
+
+@media (hover: hover) {
+  .btn-primary:hover::after {
+    transform: translateX(60%);
+  }
 }
 
 .secondary-cta {
@@ -157,25 +185,33 @@
 .choice-card {
   width: 100%;
   text-align: left;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border-soft);
-  background: color-mix(in srgb, var(--color-bg-1) 65%, transparent);
+  border-radius: var(--radius);
+  border: var(--hairline);
+  background: var(--surface);
   overflow: hidden;
   box-shadow: var(--shadow-xs);
   position: relative;
   display: grid;
   grid-template-columns: 96px 1fr;
   min-height: 92px;
-  transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  transition: transform var(--dur-1) var(--ease-out), box-shadow var(--dur-2) var(--ease-out),
+    border-color var(--dur-2) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .choice-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
 }
 
 .choice-card:active {
-  transform: translateY(1px);
+  transform: translateY(0) scale(0.99);
 }
 
 .choice-card.is-selected {
-  border-color: rgba(109, 214, 195, 0.7);
-  box-shadow: var(--shadow-sm);
+  border-color: rgba(45, 200, 170, 0.55);
+  box-shadow: 0 0 0 4px rgba(45, 200, 170, 0.14);
 }
 
 .choice-card-media {
@@ -236,11 +272,27 @@
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-border-strong);
   background: color-mix(in srgb, var(--color-bg-0) 85%, transparent);
+  display: grid;
+  place-items: center;
+}
+
+.choice-card-check::after {
+  content: "✓";
+  font-size: 12px;
+  color: var(--color-brand-ink);
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity var(--dur-1) var(--ease-out), transform var(--dur-1) var(--ease-out);
 }
 
 .choice-card.is-selected .choice-card-check {
   background: rgba(109, 214, 195, 0.9);
   border-color: rgba(109, 214, 195, 0.9);
+}
+
+.choice-card.is-selected .choice-card-check::after {
+  opacity: 1;
+  transform: scale(1);
 }
 
 /* Toast */
