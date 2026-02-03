@@ -29,6 +29,7 @@ export function renderArchetypeDetailScreen(archetypeId) {
   const why = Array.isArray(a.why) ? a.why : [];
   const ask = Array.isArray(a.ask_shelter) ? a.ask_shelter : [];
   const risks = Array.isArray(a.risks) ? a.risks : [];
+  const breedExamples = renderBreedExamplesSection(a);
 
   app.innerHTML = `
     <section class="screen screen-detail safe-area-padding">
@@ -51,6 +52,7 @@ export function renderArchetypeDetailScreen(archetypeId) {
 
         ${renderWhySection(why)}
         ${renderAskSection(ask)}
+        ${breedExamples}
         ${renderRisksSection(risks)}
         ${renderFooter()}
       </div>
@@ -157,6 +159,30 @@ function renderRisksSection(risks) {
       </div>
       <div class="detail-subtle">
         These aren’t “bad traits” — just areas to ask about and plan for.
+      </div>
+    </div>
+  `;
+}
+
+function renderBreedExamplesSection(archetype) {
+  const examples = Array.isArray(archetype.breed_examples) ? archetype.breed_examples : [];
+  if (!examples.length) return "";
+
+  const disclaimer =
+    archetype.breed_examples_disclaimer ||
+    "Examples only — mixes vary. Ask the shelter about the individual dog.";
+
+  return `
+    <div class="detail-section">
+      <div class="detail-section-title">Breed examples</div>
+      <div class="breed-disclaimer">${escapeHtml(disclaimer)}</div>
+      <div class="breed-examples-chips" aria-label="Breed example list">
+        ${examples
+          .map((b) => {
+            const title = b.note ? ` title="${escapeAttr(b.note)}"` : "";
+            return `<span class="breed-chip"${title}>${escapeHtml(b.name)}</span>`;
+          })
+          .join("")}
       </div>
     </div>
   `;

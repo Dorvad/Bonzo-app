@@ -166,6 +166,7 @@ function renderArchetypeCard(x) {
   const score = Math.round(x.score);
 
   const badges = buildBadges(a);
+  const breedExamples = renderBreedExamplesCard(a);
 
   return `
     <article
@@ -192,6 +193,8 @@ function renderArchetypeCard(x) {
         <div class="result-card-why" aria-label="Why this fits">
           ${renderWhyChips(a)}
         </div>
+
+        ${breedExamples}
       </div>
     </article>
   `;
@@ -202,6 +205,27 @@ function renderWhyChips(archetype) {
   return why
     .map((t) => `<span class="why-chip">${escapeHtml(t)}</span>`)
     .join("");
+}
+
+function renderBreedExamplesCard(archetype) {
+  const examples = Array.isArray(archetype.breed_examples) ? archetype.breed_examples : [];
+  if (examples.length === 0) return "";
+
+  const max = 4;
+  const visible = examples.slice(0, max);
+  const remaining = examples.length - visible.length;
+
+  return `
+    <div class="breed-examples" aria-label="Breed examples">
+      <div class="breed-examples-title">Breed examples</div>
+      <div class="breed-examples-chips">
+        ${visible
+          .map((b) => `<span class="breed-chip">${escapeHtml(b.name)}</span>`)
+          .join("")}
+        ${remaining > 0 ? `<span class="breed-chip breed-chip--more">+${remaining}</span>` : ""}
+      </div>
+    </div>
+  `;
 }
 
 function renderQuickNotes(user) {
