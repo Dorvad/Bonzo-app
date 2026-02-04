@@ -57,6 +57,8 @@ export function renderChoiceCards(mountEl, props) {
         }
 
         // Update UI and notify
+        selectedIds.clear();
+        next.forEach((value) => selectedIds.add(value));
         applySelectionUI(mountEl, type, next);
         onSelect(Array.from(next));
       } else {
